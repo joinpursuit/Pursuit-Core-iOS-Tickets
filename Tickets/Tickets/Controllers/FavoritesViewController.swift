@@ -41,24 +41,18 @@ extension FavoritesViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath)
-    let favoriteEvent = favoriteEvents[indexPath.row]
-    cell.textLabel?.text = favoriteEvent.name
-    if let imageData = favoriteEvent.imageData {
-      DispatchQueue.global().async {
-        let image = UIImage(data: imageData)
-        DispatchQueue.main.async {
-          cell.imageView?.image = image
-        }
-      }
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else {
+      fatalError("FavoriteCell is nil")
     }
+    let favoriteEvent = favoriteEvents[indexPath.row]
+    cell.configureCell(favoriteEvent: favoriteEvent)
     return cell
   }
 }
 
 extension FavoritesViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 100
+    return 140
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

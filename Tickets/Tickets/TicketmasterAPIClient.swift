@@ -33,7 +33,7 @@ final class TicketmasterAPIClient {
         completion(error, nil)
       } else if let data = data {
         do {
-          let eventData = try JSONDecoder().decode(EventData.self, from: data)
+          let eventData = try JSONDecoder().decode(EventsData.self, from: data)
           let events = eventData._embedded?.events
           completion(nil, events)
         } catch {

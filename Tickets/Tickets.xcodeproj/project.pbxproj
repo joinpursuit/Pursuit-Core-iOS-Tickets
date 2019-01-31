@@ -17,12 +17,15 @@
 		57C1B5C622021C890045FB20 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1B5C522021C890045FB20 /* UserDefaultsKeys.swift */; };
 		57C1B5CA220232380045FB20 /* TicketmasterAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1B5C9220232380045FB20 /* TicketmasterAPIClient.swift */; };
 		57C1B5CC220234F10045FB20 /* SecretKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1B5CB220234F10045FB20 /* SecretKeys.swift */; };
-		57C1B5CE22023AFA0045FB20 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1B5CD22023AFA0045FB20 /* Event.swift */; };
 		57C1B5D0220246B10045FB20 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1B5CF220246B10045FB20 /* EventDetailView.swift */; };
 		57C1B5D2220250A70045FB20 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1B5D1220250A70045FB20 /* DataPersistenceManager.swift */; };
 		57C1B5D42202531A0045FB20 /* FavoriteEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1B5D32202531A0045FB20 /* FavoriteEvent.swift */; };
 		57C1B5D62202546E0045FB20 /* EventDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1B5D52202546E0045FB20 /* EventDataManager.swift */; };
 		57C1B5DA220271270045FB20 /* ImaageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1B5D9220271270045FB20 /* ImaageHelper.swift */; };
+		57D4D30D22028C4D006F6AFC /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4D30C22028C4D006F6AFC /* FavoriteCell.swift */; };
+		57D4D30F22028C8F006F6AFC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4D30E22028C8F006F6AFC /* Event.swift */; };
+		57D4D31222028CB2006F6AFC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4D31022028CB2006F6AFC /* Date+Extensions.swift */; };
+		57D4D31322028CB2006F6AFC /* String+DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D4D31122028CB2006F6AFC /* String+DateExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,12 +41,15 @@
 		57C1B5C522021C890045FB20 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		57C1B5C9220232380045FB20 /* TicketmasterAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketmasterAPIClient.swift; sourceTree = "<group>"; };
 		57C1B5CB220234F10045FB20 /* SecretKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKeys.swift; sourceTree = "<group>"; };
-		57C1B5CD22023AFA0045FB20 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		57C1B5CF220246B10045FB20 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		57C1B5D1220250A70045FB20 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 		57C1B5D32202531A0045FB20 /* FavoriteEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEvent.swift; sourceTree = "<group>"; };
 		57C1B5D52202546E0045FB20 /* EventDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataManager.swift; sourceTree = "<group>"; };
 		57C1B5D9220271270045FB20 /* ImaageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImaageHelper.swift; sourceTree = "<group>"; };
+		57D4D30C22028C4D006F6AFC /* FavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		57D4D30E22028C8F006F6AFC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		57D4D31022028CB2006F6AFC /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		57D4D31122028CB2006F6AFC /* String+DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+DateExtensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 				57C1B5D7220270A30045FB20 /* Models */,
 				57C1B5D8220270D30045FB20 /* Views */,
 				57C1B5C8220231970045FB20 /* Controllers */,
+				57D4D31422028CB7006F6AFC /* Date Helpers */,
 				57C1B5C7220231860045FB20 /* Supporting Files */,
 				57C1B5B722020E8F0045FB20 /* Info.plist */,
 			);
@@ -114,8 +121,8 @@
 		57C1B5D7220270A30045FB20 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				57C1B5CD22023AFA0045FB20 /* Event.swift */,
 				57C1B5D52202546E0045FB20 /* EventDataManager.swift */,
+				57D4D30E22028C8F006F6AFC /* Event.swift */,
 				57C1B5D32202531A0045FB20 /* FavoriteEvent.swift */,
 			);
 			path = Models;
@@ -125,8 +132,18 @@
 			isa = PBXGroup;
 			children = (
 				57C1B5CF220246B10045FB20 /* EventDetailView.swift */,
+				57D4D30C22028C4D006F6AFC /* FavoriteCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		57D4D31422028CB7006F6AFC /* Date Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				57D4D31022028CB2006F6AFC /* Date+Extensions.swift */,
+				57D4D31122028CB2006F6AFC /* String+DateExtensions.swift */,
+			);
+			path = "Date Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,18 +217,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57C1B5CE22023AFA0045FB20 /* Event.swift in Sources */,
 				57C1B5D42202531A0045FB20 /* FavoriteEvent.swift in Sources */,
 				57C1B5C02202124D0045FB20 /* EventsFeedController.swift in Sources */,
 				57C1B5DA220271270045FB20 /* ImaageHelper.swift in Sources */,
 				57C1B5CA220232380045FB20 /* TicketmasterAPIClient.swift in Sources */,
 				57C1B5D62202546E0045FB20 /* EventDataManager.swift in Sources */,
+				57D4D30D22028C4D006F6AFC /* FavoriteCell.swift in Sources */,
+				57D4D31322028CB2006F6AFC /* String+DateExtensions.swift in Sources */,
 				57C1B5C2220212600045FB20 /* FavoritesViewController.swift in Sources */,
 				57C1B5C622021C890045FB20 /* UserDefaultsKeys.swift in Sources */,
+				57D4D31222028CB2006F6AFC /* Date+Extensions.swift in Sources */,
 				57C1B5D0220246B10045FB20 /* EventDetailView.swift in Sources */,
 				57C1B5C42202127A0045FB20 /* EventDetailViewController.swift in Sources */,
 				57C1B5CC220234F10045FB20 /* SecretKeys.swift in Sources */,
 				57C1B5AC22020E8E0045FB20 /* AppDelegate.swift in Sources */,
+				57D4D30F22028C8F006F6AFC /* Event.swift in Sources */,
 				57C1B5D2220250A70045FB20 /* DataPersistenceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

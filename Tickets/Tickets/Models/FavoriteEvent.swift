@@ -15,4 +15,33 @@ struct FavoriteEvent: Codable {
   let dateTime: String?
   let imageData: Data?
   let id: String
+  let venue: String
+  
+  public var getDay: String {
+    var day = "no day"
+    if let value = dateTime?.formatISODateString(dateFormat: "EEE") {
+      day = value.uppercased()
+    }
+    return day
+  }
+  
+  public var getDate: String {
+    var date = "no date"
+    if let value = dateTime?.formatISODateString(dateFormat: "MMM d") {
+      date = value.uppercased()
+    }
+    return date
+  }
+  
+  public var getTime: String {
+    var time = "no time"
+    if let value = dateTime?.formatISODateString(dateFormat: "h:mm a") {
+      time = value.uppercased()
+    }
+    return time
+  }
+  
+//  public var getVenue: String {
+//    return _embedded?.venues.first?.name ?? "no venue name"
+//  }
 }

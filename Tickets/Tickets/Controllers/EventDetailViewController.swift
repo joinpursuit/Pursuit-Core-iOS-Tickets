@@ -67,10 +67,12 @@ class EventDetailViewController: UIViewController {
       return
     }
     
+    let venue = event._embedded?.venues.first?.name ?? "no venue"
     let favoriteEvent = FavoriteEvent.init(name: event.name,
                                       dateTime: event.dates.start.dateTime,
                                       imageData: imageData,
-                                      id: event.id)
+                                      id: event.id,
+                                      venue: venue)
     let savedStatus = EventDataManager.saveToDocumentDirectory(newFavoriteEvent: favoriteEvent)
     if let error = savedStatus.error {
       showAlert(title: "Saving error", message: "Error saving \(error.localizedDescription)")
